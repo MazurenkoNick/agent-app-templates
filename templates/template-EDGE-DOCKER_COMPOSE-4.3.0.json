@@ -2,7 +2,7 @@
   "config": {
     "type": "DOCKER_COMPOSE"
   },
-  "previousVersion": null,
+  "previousVersion": "4.2.1.2",
   "nextVersion": null,
   "startSteps": [
     {
