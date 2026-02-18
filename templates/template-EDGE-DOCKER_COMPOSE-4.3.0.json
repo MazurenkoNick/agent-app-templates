@@ -1,7 +1,6 @@
 {
   "config": {
-    "type": "DOCKER_COMPOSE",
-    "projectName": "tb-edge-ce"
+    "type": "DOCKER_COMPOSE"
   },
   "previousVersion": "4.2.0",
   "nextVersion": null,
