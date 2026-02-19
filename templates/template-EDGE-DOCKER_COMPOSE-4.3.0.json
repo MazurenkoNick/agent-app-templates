@@ -36,5 +36,14 @@
       "message": "Once the Edge service has started, open the Edge web interface at http://localhost:8080, or http://localhost:18080 if you modified the HTTP bind port configuration in the previous step.\n\nLog in using your tenant credentials from either your local ThingsBoard Server or the ThingsBoard Live Demo."
     }
   ],
+  "deleteSteps": [
+    {
+      "id": "560e8400-e29b-41d4-a716-446655440001",
+      "type": "COMPOSE_DOWN",
+      "optional": false,
+      "templateOnly": false,
+      "removeVolumes": false
+    }
+  ],
   "upgradeSteps": []
 }
