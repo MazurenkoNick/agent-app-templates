@@ -19,20 +19,9 @@
     },
     {
       "id": "550e8400-e29b-41d4-a716-446655440001",
-      "nextId": "550e8400-e29b-41d4-a716-446655440003",
       "title": "Process Compose Configuration",
       "type": "COMPOSE",
       "templateOnly": false
-    },
-    {
-      "id": "550e8400-e29b-41d4-a716-446655440003",
-      "nextId": null,
-      "title": "Open ThingsBoard Edge UI",
-      "type": "INFO",
-      "templateOnly": false,
-      "state": {
-        "message": "Once the Edge service has started, open the Edge web interface at http://localhost:8080, or http://localhost:18080 if you modified the HTTP bind port configuration in the previous step.\n\nLog in using your tenant credentials from either your local ThingsBoard Server or the ThingsBoard Live Demo."
-      }
     }
   ],
   "deleteSteps": [
