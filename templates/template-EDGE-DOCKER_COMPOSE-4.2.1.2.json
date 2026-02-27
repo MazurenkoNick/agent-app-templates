@@ -37,16 +37,47 @@
   ],
   "deleteSteps": [
     {
-      "id": "560e8400-e29b-41d4-a716-446655440001"§,
-      "type": "COMPOSE_DOWN",
+      "id": "560e8400-e29b-41d4-a716-446655440001",
       "title": "Remove Thingsboard Edge",
+      "type": "COMPOSE_DOWN",
       "templateOnly": false,
       "state": {
         "removeVolumes": false
       }
     }
   ],
-  "upgradeSteps": [],
+  "upgradeSteps": [
+    {
+      "id": "580e8400-e29b-41d4-a716-446655440001",
+      "nextId": "580e8400-e29b-41d4-a716-446655440002",
+      "title": "Remove Current Edge containers",
+      "type": "COMPOSE_DOWN",
+      "templateOnly": false
+    },
+    {
+      "id": "580e8400-e29b-41d4-a716-446655440002",
+      "nextId": "580e8400-e29b-41d4-a716-446655440003",
+      "title": "Backup specified volumes",
+      "type": "BACKUP_VOLUME",
+      "templateOnly": false,
+      "state": {
+        "backupVolumes": null
+      }
+    },
+    {
+      "id": "580e8400-e29b-41d4-a716-446655440003",
+      "nextId": "580e8400-e29b-41d4-a716-446655440004",
+      "title": "Process Compose Configuration",
+      "type": "COMPOSE",
+      "templateOnly": false
+    },
+    {
+      "id": "580e8400-e29b-41d4-a716-446655440004",
+      "title": "Remove backup volumes",
+      "type": "BACKUP_VOLUME_REMOVE",
+      "templateOnly": false
+    }
+  ],
   "rollbackSteps": [
     {
       "id": "570e8400-e29b-41d4-a716-446655440001",
