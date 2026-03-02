@@ -50,18 +50,27 @@
       "type": "BACKUP_VOLUME",
       "templateOnly": false,
       "state": {
-        "backupVolumes": null
+        "backupVolumes": []
       }
     },
     {
       "id": "580e8400-e29b-41d4-a716-446655440003",
       "nextId": "580e8400-e29b-41d4-a716-446655440004",
+      "title": "Process Compose Database Migration",
+      "type": "COMPOSE_MIGRATION",
+      "templateOnly": false,
+      "serviceImageName": "thingsboard/tb-edge:4.3.0EDGE",
+      "entrypoint": "upgrade-tb-edge.sh"
+    },
+    {
+      "id": "580e8400-e29b-41d4-a716-446655440004",
+      "nextId": "580e8400-e29b-41d4-a716-446655440005",
       "title": "Process Compose Configuration",
       "type": "COMPOSE",
       "templateOnly": false
     },
     {
-      "id": "580e8400-e29b-41d4-a716-446655440004",
+      "id": "580e8400-e29b-41d4-a716-446655440005",
       "title": "Remove backup volumes",
       "type": "BACKUP_VOLUME_REMOVE",
       "templateOnly": false
