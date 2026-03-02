@@ -62,12 +62,10 @@
       "serviceOverrides": [
         {
           "serviceImageName": "thingsboard/tb-edge:4.3.0EDGE",
-          "properties": [
-            {
-              "entrypoint": "upgrade-tb-edge.sh",
-              "restart": "on-failure"
-            }
-          ]
+          "properties": {
+            "entrypoint": "upgrade-tb-edge.sh",
+            "restart": "on-failure"
+          }
         }
       ]
     },
