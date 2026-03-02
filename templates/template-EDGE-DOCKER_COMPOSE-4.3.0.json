@@ -59,8 +59,17 @@
       "title": "Process Compose Database Migration",
       "type": "COMPOSE_MIGRATION",
       "templateOnly": false,
-      "serviceImageName": "thingsboard/tb-edge:4.3.0EDGE",
-      "entrypoint": "upgrade-tb-edge.sh"
+      "serviceOverrides": [
+        {
+          "serviceImageName": "thingsboard/tb-edge:4.3.0EDGE",
+          "properties": [
+            {
+              "entrypoint": "upgrade-tb-edge.sh",
+              "restart": "on-failure"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "580e8400-e29b-41d4-a716-446655440004",
