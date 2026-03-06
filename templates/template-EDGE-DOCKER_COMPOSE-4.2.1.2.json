@@ -2,8 +2,8 @@
   "config": {
     "type": "DOCKER_COMPOSE"
   },
-  "previousVersion": "4.2.0",
-  "nextVersion": "4.3.0",
+  "previousVersion": "4.2.1.2EDGE",
+  "nextVersion": "4.3.0EDGE",
   "startSteps": [
     {
       "id": "550e8400-e29b-41d4-a716-446655440000",
