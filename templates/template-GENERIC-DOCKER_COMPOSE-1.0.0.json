@@ -19,7 +19,7 @@
       "title": "Process Compose Configuration",
       "type": "COMPOSE",
       "templateOnly": false,
-      "state": {
+      "defaultState": {
         "pullImages": false
       }
     }
