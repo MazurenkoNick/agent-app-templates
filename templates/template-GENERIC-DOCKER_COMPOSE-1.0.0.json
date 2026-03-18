@@ -20,7 +20,7 @@
       "type": "COMPOSE",
       "templateOnly": false,
       "defaultState": {
-        "pullImages": false
+        "pullImages": true
       }
     }
   ],
