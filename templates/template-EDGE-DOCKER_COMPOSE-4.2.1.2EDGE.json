@@ -3,7 +3,7 @@
     "type": "DOCKER_COMPOSE",
     "imageDigest": "sha256:7c6184975efe8995f4e04b8ce1172f8448728478424f8fe696ff26751a140ec2"
   },
-  "nextVersions": ["4.3.0EDGE"],
+  "nextVersion": "4.3.0EDGE",
   "startSteps": [
     {
       "id": "550e8400-e29b-41d4-a716-446655440000",
