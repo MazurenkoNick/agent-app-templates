@@ -1,8 +1,8 @@
 {
   "config": {
-    "type": "DOCKER_COMPOSE",
-    "imageDigest": "sha256:7c6184975efe8995f4e04b8ce1172f8448728478424f8fe696ff26751a140ec2"
+    "type": "DOCKER_COMPOSE"
   },
+  "imageDigest": "sha256:7c6184975efe8995f4e04b8ce1172f8448728478424f8fe696ff26751a140ec2",
   "nextVersion": "4.3.0EDGE",
   "startSteps": [
     {
