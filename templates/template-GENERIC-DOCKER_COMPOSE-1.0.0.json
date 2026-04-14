@@ -46,5 +46,13 @@
         "failedEventId": null
       }
     }
+  ],
+  "restartSteps": [
+    {
+      "id": "580e8400-e29b-41d4-a716-446655440001",
+      "type": "COMPOSE_RESTART",
+      "title": "Restart ThingsBoard Edge",
+      "templateOnly": false
+    }
   ]
 }
