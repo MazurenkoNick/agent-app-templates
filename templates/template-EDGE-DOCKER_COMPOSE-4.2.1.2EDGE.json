@@ -24,6 +24,9 @@
       "templateOnly": false,
       "state": {
         "pullImages": false
+      },
+      "defaultState": {
+        "pullImages": true
       }
     }
   ],
