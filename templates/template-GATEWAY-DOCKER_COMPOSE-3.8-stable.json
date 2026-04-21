@@ -1,0 +1,61 @@
+{
+  "config": {
+    "type": "DOCKER_COMPOSE"
+  },
+  "nextVersion": null,
+  "startSteps": [
+    {
+      "id": "770e8400-e29b-41d4-a716-446655440000",
+      "nextId": "770e8400-e29b-41d4-a716-446655440001",
+      "title": "Choose Installation Type",
+      "type": "COMPOSE_TEMPLATE",
+      "templateOnly": true,
+      "composeTemplates": {
+        "default": "compose/gateway/3.8-stable/default.yml"
+      }
+    },
+    {
+      "id": "770e8400-e29b-41d4-a716-446655440001",
+      "title": "Process Compose Configuration",
+      "type": "COMPOSE",
+      "templateOnly": false,
+      "state": {
+        "pullImages": false
+      },
+      "defaultState": {
+        "pullImages": true
+      }
+    }
+  ],
+  "deleteSteps": [
+    {
+      "id": "780e8400-e29b-41d4-a716-446655440001",
+      "title": "Remove ThingsBoard Gateway",
+      "type": "COMPOSE_DOWN",
+      "templateOnly": false,
+      "state": {
+        "removeVolumes": false
+      }
+    }
+  ],
+  "upgradeSteps": [],
+  "rollbackSteps": [
+    {
+      "id": "790e8400-e29b-41d4-a716-446655440001",
+      "type": "ROLLBACK",
+      "title": "Rollback ThingsBoard Gateway",
+      "templateOnly": false,
+      "state": {
+        "failedEventId": null
+      }
+    }
+  ],
+  "restartSteps": [
+    {
+      "id": "7a0e8400-e29b-41d4-a716-446655440001",
+      "type": "COMPOSE_RESTART",
+      "title": "Restart ThingsBoard Gateway",
+      "templateOnly": false
+    }
+  ]
+}
