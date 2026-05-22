@@ -67,7 +67,7 @@
       "templateOnly": false,
       "serviceOverrides": [
         {
-          "serviceImageName": "thingsboard/tb-edge:4.3.0EDGE",
+          "serviceImageName": "thingsboard/tb-edge-pe:4.3.0EDGEPE",
           "properties": {
             "entrypoint": "upgrade-tb-edge.sh",
             "restart": "on-failure"
