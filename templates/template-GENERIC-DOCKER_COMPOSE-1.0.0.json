@@ -1,8 +1,6 @@
 {
   "id": "881f6030-3e41-11f1-0000-000000000000",
-  "config": {
-    "type": "DOCKER_COMPOSE"
-  },
+  "configType": "DOCKER_COMPOSE",
   "nextVersion": null,
   "startSteps": [
     {
