@@ -1,0 +1,64 @@
+{
+  "id": "88210000-3e41-11f1-0000-000000000000",
+  "configType": "DOCKER_COMPOSE",
+  "imageDigest": "",
+  "nextVersion": "3.9.1EDGEPE",
+  "startSteps": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440000",
+      "nextId": "550e8400-e29b-41d4-a716-446655440001",
+      "title": "Choose Installation Type",
+      "type": "COMPOSE_TEMPLATE",
+      "templateOnly": true,
+      "composeTemplates": {
+        "in_memory": "compose/edge/3.9.0/in_memory.yml",
+        "kafka": "compose/edge/3.9.0/kafka.yml",
+        "hybrid": "compose/edge/3.9.0/hybrid.yml"
+      }
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440001",
+      "title": "Process Compose Configuration",
+      "type": "COMPOSE",
+      "templateOnly": false,
+      "state": {
+        "pullImages": false
+      },
+      "defaultState": {
+        "pullImages": true
+      }
+    }
+  ],
+  "deleteSteps": [
+    {
+      "id": "560e8400-e29b-41d4-a716-446655440001",
+      "type": "COMPOSE_DOWN",
+      "title": "Remove Thingsboard Edge",
+      "templateOnly": false,
+      "state": {
+        "removeVolumes": false
+      }
+    }
+  ],
+  "upgradeSteps": [
+  ],
+  "rollbackSteps": [
+    {
+      "id": "570e8400-e29b-41d4-a716-446655440001",
+      "type": "ROLLBACK",
+      "title": "Rollback ThingsBoard Edge",
+      "templateOnly": false,
+      "state": {
+        "failedEventId": null
+      }
+    }
+  ],
+  "restartSteps": [
+    {
+      "id": "580e8400-e29b-41d4-a716-446655440001",
+      "type": "COMPOSE_RESTART",
+      "title": "Restart ThingsBoard Edge",
+      "templateOnly": false
+    }
+  ]
+}

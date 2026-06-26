@@ -1,8 +1,8 @@
 {
-  "id": "88157520-3e41-11f1-0000-000000000000",
+  "id": "882b0000-3e41-11f1-0000-000000000000",
   "configType": "DOCKER_COMPOSE",
-  "imageDigest": "sha256:7c6184975efe8995f4e04b8ce1172f8448728478424f8fe696ff26751a140ec2",
-  "nextVersion": "4.2.2EDGEPE",
+  "imageDigest": "",
+  "nextVersion": "4.3.0EDGEPE",
   "startSteps": [
     {
       "id": "550e8400-e29b-41d4-a716-446655440000",
@@ -11,9 +11,9 @@
       "type": "COMPOSE_TEMPLATE",
       "templateOnly": true,
       "composeTemplates": {
-        "in_memory": "compose/edge/4.2.1.2/in_memory.yml",
-        "kafka": "compose/edge/4.2.1.2/kafka.yml",
-        "hybrid": "compose/edge/4.2.1.2/hybrid.yml"
+        "in_memory": "compose/edge/4.2.2.2/in_memory.yml",
+        "kafka": "compose/edge/4.2.2.2/kafka.yml",
+        "hybrid": "compose/edge/4.2.2.2/hybrid.yml"
       }
     },
     {
@@ -32,8 +32,8 @@
   "deleteSteps": [
     {
       "id": "560e8400-e29b-41d4-a716-446655440001",
-      "title": "Remove Thingsboard Edge",
       "type": "COMPOSE_DOWN",
+      "title": "Remove Thingsboard Edge",
       "templateOnly": false,
       "state": {
         "removeVolumes": false
