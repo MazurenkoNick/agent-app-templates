@@ -22,10 +22,10 @@
       "type": "COMPOSE",
       "templateOnly": false,
       "state": {
-        "pullImages": false
-      },
-      "defaultState": {
-        "pullImages": true
+        "pullImages": {
+          "value": true,
+          "userChoice": true
+        }
       }
     }
   ],
@@ -36,7 +36,10 @@
       "type": "COMPOSE_DOWN",
       "templateOnly": false,
       "state": {
-        "removeVolumes": false
+        "removeVolumes": {
+          "value": false,
+          "userChoice": true
+        }
       }
     }
   ],
@@ -55,7 +58,10 @@
       "type": "BACKUP_VOLUME",
       "templateOnly": false,
       "state": {
-        "backupVolumes": []
+        "backupVolumes": {
+          "value": [],
+          "userChoice": true
+        }
       }
     },
     {
@@ -64,8 +70,11 @@
       "title": "Process Compose Configuration",
       "type": "COMPOSE",
       "templateOnly": false,
-      "defaultState": {
-        "pullImages": true
+      "state": {
+        "pullImages": {
+          "value": true,
+          "userChoice": true
+        }
       }
     },
     {
@@ -82,7 +91,10 @@
       "title": "Rollback ThingsBoard Edge",
       "templateOnly": false,
       "state": {
-        "failedEventId": null
+        "failedEventId": {
+          "value": null,
+          "userChoice": false
+        }
       }
     }
   ],

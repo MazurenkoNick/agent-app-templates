@@ -19,10 +19,10 @@
       "type": "COMPOSE",
       "templateOnly": false,
       "state": {
-        "pullImages": false
-      },
-      "defaultState": {
-        "pullImages": true
+        "pullImages": {
+          "value": true,
+          "userChoice": true
+        }
       }
     }
   ],
@@ -33,7 +33,10 @@
       "type": "COMPOSE_DOWN",
       "templateOnly": false,
       "state": {
-        "removeVolumes": false
+        "removeVolumes": {
+          "value": false,
+          "userChoice": true
+        }
       }
     }
   ],
@@ -45,7 +48,10 @@
       "title": "Rollback Application",
       "templateOnly": false,
       "state": {
-        "failedEventId": null
+        "failedEventId": {
+          "value": null,
+          "userChoice": false
+        }
       }
     }
   ],

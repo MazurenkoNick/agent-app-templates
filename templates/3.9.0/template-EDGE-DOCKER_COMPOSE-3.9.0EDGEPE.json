@@ -22,10 +22,10 @@
       "type": "COMPOSE",
       "templateOnly": false,
       "state": {
-        "pullImages": false
-      },
-      "defaultState": {
-        "pullImages": true
+        "pullImages": {
+          "value": true,
+          "userChoice": true
+        }
       }
     }
   ],
@@ -36,12 +36,14 @@
       "title": "Remove Thingsboard Edge",
       "templateOnly": false,
       "state": {
-        "removeVolumes": false
+        "removeVolumes": {
+          "value": false,
+          "userChoice": true
+        }
       }
     }
   ],
-  "upgradeSteps": [
-  ],
+  "upgradeSteps": [],
   "rollbackSteps": [
     {
       "id": "570e8400-e29b-41d4-a716-446655440001",
@@ -49,7 +51,10 @@
       "title": "Rollback ThingsBoard Edge",
       "templateOnly": false,
       "state": {
-        "failedEventId": null
+        "failedEventId": {
+          "value": null,
+          "userChoice": false
+        }
       }
     }
   ],
