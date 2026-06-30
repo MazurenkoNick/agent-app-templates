@@ -95,7 +95,7 @@
       "state": {
         "pullImages": {
           "value": false,
-          "userChoice": true
+          "userChoice": false
         }
       }
     },
