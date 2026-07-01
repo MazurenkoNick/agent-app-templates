@@ -2,7 +2,7 @@
   "id": "88157520-3e41-11f1-0000-000000000000",
   "configType": "DOCKER_COMPOSE",
   "imageDigest": "sha256:7c6184975efe8995f4e04b8ce1172f8448728478424f8fe696ff26751a140ec2",
-  "nextVersion": "4.2.2EDGEPE",
+  "nextVersion": "4.3.1.2EDGEPE",
   "startSteps": [
     {
       "id": "550e8400-e29b-41d4-a716-446655440000",
