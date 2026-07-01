@@ -53,7 +53,7 @@
     },
     {
       "id": "580e8400-e29b-41d4-a716-446655440002",
-      "nextId": "580e8400-e29b-41d4-a716-446655440003",
+      "nextId": "580e8400-e29b-41d4-a716-446655440013",
       "title": "Backup specified volumes",
       "type": "BACKUP_VOLUME",
       "templateOnly": false,
@@ -65,25 +65,29 @@
       }
     },
     {
-      "id": "580e8400-e29b-41d4-a716-446655440003",
+      "id": "580e8400-e29b-41d4-a716-446655440013",
+      "nextId": "580e8400-e29b-41d4-a716-446655440014",
+      "title": "Process Compose Configuration",
+      "type": "COMPOSE",
+      "templateOnly": false,
+      "state": {
+        "serviceImageRegexPatterns": { "value": ["postgres:.+"], "userChoice": false }
+      }
+    },
+    {
+      "id": "580e8400-e29b-41d4-a716-446655440014",
       "nextId": "580e8400-e29b-41d4-a716-446655440004",
       "title": "Process Compose Database Migration",
-      "type": "COMPOSE_MIGRATION",
+      "type": "RUN_JOB",
       "templateOnly": false,
-      "serviceOverrides": [
-        {
-          "serviceImageName": "thingsboard/tb-edge-pe:4.2.2EDGEPE",
-          "properties": {
-            "entrypoint": "upgrade-tb-edge.sh",
-            "restart": "on-failure"
-          }
-        }
-      ],
       "state": {
-        "pullImages": {
-          "value": false,
-          "userChoice": true
-        }
+        "image": { "value": "thingsboard/tb-edge-pe:4.2.2EDGEPE", "userChoice": false },
+        "binds": { "value": ["${compose.svcImgRegex(thingsboard/tb-edge-pe:.+).volumes}"], "userChoice": false },
+        "env": { "value": ["${compose.svcImgRegex(thingsboard/tb-edge-pe:.+).environment}"], "userChoice": false },
+        "entrypoint": { "value": ["upgrade-tb-edge.sh"], "userChoice": false },
+        "pullImages": { "value": false, "userChoice": false },
+        "retries": { "value": 10, "userChoice": false },
+        "networkFromServiceImageRegexPattern": { "value": "postgres:.+", "userChoice": false }
       }
     },
     {
