@@ -71,7 +71,11 @@
       "type": "COMPOSE",
       "templateOnly": false,
       "state": {
-        "serviceImageRegexPatterns": { "value": ["postgres:.+"], "userChoice": false }
+        "serviceImageRegexPatterns": { "value": ["postgres:.+"], "userChoice": false },
+        "pullImages": {
+          "value": true,
+          "userChoice": true
+        }
       }
     },
     {
