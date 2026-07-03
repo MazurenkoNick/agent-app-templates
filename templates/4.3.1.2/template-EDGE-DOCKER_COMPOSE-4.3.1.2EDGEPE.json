@@ -83,10 +83,7 @@
       "state": {
         "image": { "value": "thingsboard/tb-edge-pe:4.3.1.2EDGEPE", "userChoice": false },
         "binds": { "value": ["${compose.svcImgRegex(thingsboard/tb-edge-pe:.+).volumes}"], "userChoice": false },
-        "env": { "value": [
-          "${compose.svcImgRegex(thingsboard/tb-edge-pe:.+).environment}",
-          "SKIP_SCHEMA_VERSION_CHECK=true"
-        ], "userChoice": false },
+        "env": { "value": ["${compose.svcImgRegex(thingsboard/tb-edge-pe:.+).environment}"], "userChoice": false },
         "entrypoint": { "value": ["upgrade-tb-edge.sh"], "userChoice": false },
         "pullImages": { "value": false, "userChoice": false },
         "retries": { "value": 10, "userChoice": false },
