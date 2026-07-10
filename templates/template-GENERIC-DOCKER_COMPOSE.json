@@ -1,0 +1,64 @@
+{
+  "configType": "DOCKER_COMPOSE",
+  "startSteps": [
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440000",
+      "nextId": "660e8400-e29b-41d4-a716-446655440001",
+      "title": "Choose Installation Type",
+      "type": "COMPOSE_TEMPLATE",
+      "templateOnly": true,
+      "composeTemplates": {
+        "default": "compose/generic/default.yml"
+      }
+    },
+    {
+      "id": "660e8400-e29b-41d4-a716-446655440001",
+      "title": "Process Compose Configuration",
+      "type": "COMPOSE",
+      "templateOnly": false,
+      "state": {
+        "pullImages": {
+          "value": true,
+          "userChoice": true
+        }
+      }
+    }
+  ],
+  "deleteSteps": [
+    {
+      "id": "670e8400-e29b-41d4-a716-446655440001",
+      "title": "Remove Application",
+      "type": "COMPOSE_DOWN",
+      "templateOnly": false,
+      "state": {
+        "removeVolumes": {
+          "value": false,
+          "userChoice": true
+        }
+      }
+    }
+  ],
+  "upgradeSteps": [],
+  "rollbackSteps": [
+    {
+      "id": "680e8400-e29b-41d4-a716-446655440001",
+      "type": "ROLLBACK",
+      "title": "Rollback Application",
+      "templateOnly": false,
+      "state": {
+        "failedEventId": {
+          "value": null,
+          "userChoice": false
+        }
+      }
+    }
+  ],
+  "restartSteps": [
+    {
+      "id": "580e8400-e29b-41d4-a716-446655440001",
+      "type": "COMPOSE_RESTART",
+      "title": "Restart Application",
+      "templateOnly": false
+    }
+  ]
+}
