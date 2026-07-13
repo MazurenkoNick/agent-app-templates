@@ -1,7 +1,7 @@
 services:
   mytbedge:
     restart: always
-    image: "thingsboard/tb-edge-pe:${var.edgeVersion}"
+    image: "thingsboard/tb-edge-pe:${var.edgeVersion}EDGEPE"
     ports:
       - "8080:8080"
       - "1883:1883"
