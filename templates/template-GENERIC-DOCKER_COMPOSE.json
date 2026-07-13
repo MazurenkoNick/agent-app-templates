@@ -8,7 +8,7 @@
       "type": "COMPOSE_TEMPLATE",
       "templateOnly": true,
       "composeTemplates": {
-        "default": "compose/generic/default.yml"
+        "default": "compose/generic/default/default.yml"
       }
     },
     {
