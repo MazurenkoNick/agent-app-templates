@@ -84,7 +84,7 @@
       "templateOnly": false,
       "condition": "requiresUpdateDb",
       "state": {
-        "image": { "value": "thingsboard/tb-edge-pe:${var.edgeVersion}EDGEPE", "userChoice": false },
+        "image": { "value": "thingsboard/tb-edge-pe:${var.edgeVersion}", "userChoice": false },
         "binds": { "value": ["${compose.svcImgRegex(thingsboard/tb-edge-pe:.+).volumes}"], "userChoice": false },
         "env": { "value": ["${compose.svcImgRegex(thingsboard/tb-edge-pe:.+).environment}"], "userChoice": false },
         "entrypoint": { "value": ["upgrade-tb-edge.sh"], "userChoice": false },

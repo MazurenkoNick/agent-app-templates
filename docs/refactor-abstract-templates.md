@@ -111,7 +111,7 @@ one-off version whose infra differs.
 ```
 compose/
   edge/
-    3.9/{in_memory,kafka,hybrid}.yml            # line default; image: thingsboard/tb-edge-pe:${var.edgeVersion}EDGEPE
+    3.9/{in_memory,kafka,hybrid}.yml            # line default; image: thingsboard/tb-edge-pe:${var.edgeVersion}
     4.0/{in_memory,kafka,hybrid}.yml
     4.2/{in_memory,kafka,hybrid}.yml
     4.2/4.2.1/{in_memory,kafka,hybrid}.yml      # OPTIONAL concrete override for exactly 4.2.1
@@ -126,7 +126,7 @@ compose/
 
 > `compose/edge/L/V/<type>.yml` if it exists, else `compose/edge/L/<type>.yml`.
 
-Concrete override files may hardcode their tag or keep `${var.edgeVersion}EDGEPE` — the
+Concrete override files may hardcode their tag or keep `${var.edgeVersion}` — the
 substitutor runs over whichever file is loaded, so both work.
 
 This collapses ~17 template files → 3 and ~17 compose dirs → ~5 (one per minor line, plus
@@ -208,7 +208,7 @@ those are either generated at materialization or removed entirely.
                  "pullImages": { "value": true, "userChoice": true } } },
     { "id": "…14", "nextId": "…04", "type": "RUN_JOB", "condition": "requiresUpdateDb",
       "state": {
-        "image":      { "value": "thingsboard/tb-edge-pe:${var.edgeVersion}EDGEPE" },
+        "image":      { "value": "thingsboard/tb-edge-pe:${var.edgeVersion}" },
         "binds":      { "value": ["${compose.svcImgRegex(thingsboard/tb-edge-pe:.+).volumes}"] },
         "env":        { "value": ["${compose.svcImgRegex(thingsboard/tb-edge-pe:.+).environment}"] },
         "entrypoint": { "value": ["upgrade-tb-edge.sh"] },
