@@ -38,7 +38,20 @@
       }
     }
   ],
-  "upgradeSteps": [],
+  "upgradeSteps": [
+    {
+      "id": "770e8400-e29b-41d4-a716-446655440001",
+      "title": "Process Compose Configuration",
+      "type": "COMPOSE",
+      "templateOnly": false,
+      "state": {
+        "pullImages": {
+          "value": true,
+          "userChoice": true
+        }
+      }
+    }
+  ],
   "rollbackSteps": [
     {
       "id": "790e8400-e29b-41d4-a716-446655440001",
